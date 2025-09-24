@@ -210,7 +210,7 @@ glimpse(election2017)
 
 The data set contains, for each voting district, the following information:
 
-  + Vote shares of CDU, SPD, The Left, The Greens, AfD and FDP.
+  + Vote shares of CDU, SPD, The Left and the Greens.
   + Percentage of the population between 18 and 34 years old.
   + Population density (inhabitants per $km^2$).
   

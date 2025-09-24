@@ -718,23 +718,7 @@ par(mfrow = c(1, # Number of rows
               2 # Number of columns
               ))
 
-# Here is a histogram
 
-hist(election2017$popdensity, 
-     main = "Histogram",
-     xlab = "Population density",
-     breaks = 20,
-     col = viridis(1),
-     border = F,
-     las = 1)
-
-# And a density plot
-
-plot(density(election2017$popdensity), 
-     main = "Density plot",
-     xlab = "Population density",
-     col = viridis(1),
-     las = 1)
 
 
 
@@ -754,19 +738,7 @@ par(mfrow = c(1, # Number of rows
               1 # Number of columns
               ))
 
-# Scatterplot between the two variables of interest
 
-plot(x = election2017$popdensity, 
-     y = election2017$greenvote,
-     bty = "n",
-     las = 1,
-     pch = 19, 
-     col = twocols[1], 
-     cex = 1,
-     ylim = c(0, 25),
-     ylab = "Vote share for the Green Party (%)",
-     xlab = "Population density",
-     main = "More Dense Districts - Greener Votes?")
 
 
 ```
@@ -783,21 +755,11 @@ To model nonlinear relationships, it is sometimes (but not always!) useful to lo
 
 # Creating a logged version of popdensity
 
-election2017$logpopdensity <- log(election2017$popdensity)
+
 
 # And now plotting the new scatterplot
 
-plot(x = election2017$logpopdensity, 
-     y = election2017$greenvote,
-     bty = "n",
-     las = 1,
-     pch = 19, 
-     col = twocols[1], 
-     cex = 1,
-     ylim = c(0, 25),
-     ylab = "Vote share for the Green Party (%)",
-     xlab = "Log of Population density",
-     main = "More Dense Districts - Greener Votes?")
+
 
 
 ```
@@ -814,11 +776,11 @@ Use the `lm()` command to estimate two OLS Models:
 
 # Regression with the regular density variable
 
-linear_model <- lm(greenvote ~ popdensity, data = election2017)
+
 
 # Regression with the log transformed variable
 
-loglinear_model <- lm(greenvote ~ logpopdensity, data = election2017)
+
 
 
 ```
